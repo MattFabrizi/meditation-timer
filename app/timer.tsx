@@ -39,11 +39,11 @@ export default function Timer() {
     setTime(500);
   };
   return (
-    <div className="stopwatch-container mx-auto my-20 max-w-screen-md rounded-xl border border-solid border-white bg-white bg-opacity-40 p-4 text-slate-700 backdrop-blur-sm">
-      <p className="stopwatch-time text-[18em] font-bold md:text-[12em]">
+    <div className="stopwatch-container mx-auto max-w-[65vw] rounded-2xl border border-solid border-white bg-white bg-opacity-20 p-16 text-teal-300 backdrop-blur-md">
+      <span className="stopwatch-time block text-[18em] font-extrabold leading-none md:text-[12em]">
         {minutes.toString().padStart(2, "0")}:
         {seconds.toString().padStart(2, "0")}
-      </p>
+      </span>
       <label htmlFor="duration" className="sr-only">
         Set time
       </label>

@@ -6,7 +6,7 @@ import { Background } from "./backgroundImage";
 import Image from "next/image";
 
 const font = Barlow({
-  weight: ["400", "700", "900"],
+  weight: ["400", "700", "800", "900"],
   subsets: ["latin"],
 });
 
@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <header>
-          <div className="logo-container h-[15vh] min-h-[120px] p-8">
+          <div className="logo-container h-[120px] p-8">
             <Image
               src={logo}
               alt="logo"

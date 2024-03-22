@@ -40,10 +40,14 @@ export default function Timer() {
   };
   return (
     <div className="stopwatch-container mx-auto my-20 max-w-screen-md rounded-xl border border-solid border-white bg-white bg-opacity-40 p-4 text-slate-700 backdrop-blur-sm">
-      <p className="stopwatch-time text-[12em] font-bold">
+      <p className="stopwatch-time text-[18em] font-bold md:text-[12em]">
         {minutes.toString().padStart(2, "0")}:
         {seconds.toString().padStart(2, "0")}
       </p>
+      <label htmlFor="duration" className="sr-only">
+        Set time
+      </label>
+      <input id="duration" type="range" step={30} min={30} max={7200} />
       <div className="stopwatch-buttons">
         <button className="stopwatch-button" onClick={startAndStop}>
           {isRunning ? "Stop" : "Start"}

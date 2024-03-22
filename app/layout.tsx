@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Barlow_Condensed } from "next/font/google";
+import { Barlow, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 import logo from "../public/tempLogo.png";
 import { Background } from "./backgroundImage";
 import Image from "next/image";
 
-const font = Barlow_Condensed({
+const font = Barlow({
   weight: ["400", "700", "900"],
   subsets: ["latin"],
 });
@@ -23,8 +23,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <header className="min-h-20 bg-black">
-          <Image src={logo} alt="logo" height={60} />
+        <header>
+          <div className="logo-container h-[15vh] min-h-[120px] p-8">
+            <Image
+              src={logo}
+              alt="logo"
+              style={{ height: "100%", width: "auto" }}
+            />
+          </div>
         </header>
         <Background />
         {children}

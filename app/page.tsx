@@ -1,9 +1,9 @@
-import Timer from "./timer";
+import StopwatchApp from "./stopwatchApp";
 
 export default function Home() {
   return (
-    <main className="text-center">
-      <Timer />
+    <main>
+      <StopwatchApp />
     </main>
   );
 }

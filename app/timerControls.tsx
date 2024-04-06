@@ -1,6 +1,12 @@
 "use client";
 
-export default function Controls({ isRunning, setIsRunning }) {
+export default function Controls({
+  isRunning,
+  setIsRunning,
+}: {
+  isRunning: boolean;
+  setIsRunning: any;
+}) {
   // Method to start and stop timer
   const startAndStop = () => {
     setIsRunning(!isRunning);

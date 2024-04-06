@@ -13,10 +13,6 @@ export default function Controls({ isRunning, setIsRunning }) {
 
   return (
     <div className="stopwatch-controls flex flex-auto justify-center">
-      {/* <label htmlFor="duration" className="sr-only">
-        Set time
-      </label>
-      <input id="duration" type="range" step={30} min={30} max={7200} /> */}
       <button className="stopwatch-button" onClick={startAndStop}>
         {isRunning ? "Stop" : "Start"}
       </button>

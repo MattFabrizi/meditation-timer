@@ -8,7 +8,7 @@ export default function StopwatchApp() {
 
   return (
     <div
-      className="stopwatch-container mx-auto box-border flex w-[900px] max-w-[65vw] flex-col flex-nowrap content-center justify-center
+      className="stopwatch-container mx-auto box-border flex min-w-[900px] max-w-[65vw] flex-col flex-nowrap content-center justify-center
                 rounded-2xl border border-solid border-white 
                 bg-white bg-opacity-20 p-16 text-teal-500 backdrop-blur-md"
     >

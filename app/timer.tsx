@@ -26,29 +26,33 @@ export default function Timer({ isRunning }: { isRunning: boolean }) {
   }, [isRunning, minutes, seconds]);
 
   return (
-    <div className="stopwatch-time flex flex-nowrap justify-center text-[20vw] font-extrabold leading-none">
+    <div className="stopwatch-time flex flex-nowrap items-center justify-center text-[20vw] font-extrabold leading-none">
       <input
-        type="number"
-        value={minutes.toString().padStart(2, "0")}
-        onChange={(e) => setMinutes(parseInt(e.target.value))}
+        type="text"
+        pattern="[0-9]*"
+        inputMode="numeric"
+        value={String(minutes).padStart(2, "0")}
+        onChange={(e) =>
+          setMinutes(Math.min(parseInt(e.target.value) || 0, 90))
+        }
+        placeholder="00"
         disabled={isRunning}
-        size={1}
-        min={0}
-        max={90}
-        className="bg-transparent text-right focus:outline-none"
-        style={{ WebkitAppearance: "none", MozAppearance: "textfield" }}
+        className="appearance-none border-none bg-transparent text-right focus:outline-none"
+        style={{ width: "100%", minWidth: "2ch" }}
       />
-      :
+      <span className="text-[10vw]">:</span>
       <input
-        type="number"
-        value={seconds.toString().padStart(2, "0")}
-        onChange={(e) => setSeconds(parseInt(e.target.value))}
+        type="text"
+        pattern="[0-9]*"
+        inputMode="numeric"
+        value={String(seconds).padStart(2, "0")}
+        onChange={(e) =>
+          setSeconds(Math.min(parseInt(e.target.value) || 0, 60))
+        }
+        placeholder="00"
         disabled={isRunning}
-        size={1}
-        min={0}
-        max={60}
-        className="bg-transparent focus:outline-none"
-        style={{ WebkitAppearance: "none", MozAppearance: "textfield" }}
+        className="appearance-none border-none bg-transparent text-left focus:outline-none"
+        style={{ width: "100%", minWidth: "2ch" }}
       />
     </div>
   );

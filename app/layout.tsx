@@ -1,19 +1,18 @@
 import type { Metadata } from "next";
-import { Barlow, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 import logo from "../public/tempLogo.png";
-import { Background } from "./backgroundImage";
 import Image from "next/image";
-
-const font = Barlow({
-  weight: ["400", "700", "800", "900"],
-  subsets: ["latin"],
-});
+import {Space_Grotesk} from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Online Meditation Timer",
   description: "A customizable and simple timer for your meditations",
 };
+
+const fontFamily = Space_Grotesk({
+  subsets: ['latin'],
+  fallback: ['sans-serif'],
+});
 
 export default function RootLayout({
   children,
@@ -21,18 +20,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={font.className}>
-        <header>
-          <div className="logo-container h-[120px] p-8">
+    <html lang="en" className={fontFamily.className}>
+      <body className="bg-bg-image bg-cover bg-no-repeat min-h-dvh flex flex-col">
+        <header className="p-3 bg-white bg-opacity-40">
+          <div className="logo-container max-w-16 m-auto">
             <Image
               src={logo}
               alt="logo"
-              style={{ height: "100%", width: "auto" }}
-            />
+            /> 
           </div>
         </header>
-        <Background />
         {children}
       </body>
     </html>

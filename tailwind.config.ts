@@ -10,9 +10,13 @@ const config: Config = {
     extend: {
       backgroundImage: {
         // "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        // "gradient-conic":
-        //   "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "bg-image": "./public/bg-temp.png",
+        // "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "bg-image": "url('/bg_temp.jpg')",
+      },
+      colors: {
+        'primary': '#454897',
+        'secondary': '#f7687a',
+        'accent': '#d3f49b'
       },
     },
   },

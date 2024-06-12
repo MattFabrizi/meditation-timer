@@ -19,8 +19,8 @@ export default function Controls({
 
   return (
     <div className="stopwatch-controls flex flex-auto justify-center">
-      <button className="stopwatch-button" onClick={startAndStop}>
-        {isRunning ? "Stop" : "Start"}
+      <button className="stopwatch-button bg-secondary text-white tracking-widest" onClick={startAndStop}>
+        {isRunning ? "STOP" : "START"}
       </button>
       {/* <button className="stopwatch-button" onClick={reset}>
           Reset

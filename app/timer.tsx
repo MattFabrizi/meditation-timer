@@ -26,7 +26,7 @@ export default function Timer({ isRunning }: { isRunning: boolean }) {
   }, [isRunning, minutes, seconds]);
 
   return (
-    <div className="stopwatch-time flex flex-nowrap items-center justify-center text-primary text-[20vw] font-bold leading-none">
+    <div className="stopwatch-time text-big-clamp flex flex-nowrap items-center justify-center leading-none text-primary">
       <input
         type="text"
         pattern="[0-9]*"
@@ -40,7 +40,7 @@ export default function Timer({ isRunning }: { isRunning: boolean }) {
         className="appearance-none border-none bg-transparent text-right focus:outline-none"
         style={{ width: "100%", minWidth: "2ch" }}
       />
-      <span className="text-[10vw] text-secondary">:</span>
+      <span className="text-small-clamp text-secondary">:</span>
       <input
         type="text"
         pattern="[0-9]*"

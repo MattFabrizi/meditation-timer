@@ -3,13 +3,11 @@ import StopwatchApp from "./stopwatchApp";
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col p-4 my-auto">
+      <main className="my-auto flex flex-col p-6">
         <StopwatchApp />
       </main>
-      <div className="footer text-center">
-        <button className="my-4 text-sm bg-accent">
-          Buy Me a Coffee
-        </button>
+      <div className="footer mb-24 text-center">
+        <button className="my-4 bg-accent text-sm">Buy Me a Coffee</button>
       </div>
     </>
   );

@@ -18,6 +18,10 @@ const config: Config = {
         'secondary': '#f7687a',
         'accent': '#d3f49b'
       },
+      fontSize: {
+        'big-clamp': 'clamp(8rem, 1rem + 20vw, 20rem)',
+        'small-clamp': 'clamp(4rem, 1rem + 10vw, 8rem)'
+      },
     },
   },
   plugins: [],

@@ -19,7 +19,7 @@ const config: Config = {
         'accent': '#d3f49b'
       },
       fontSize: {
-        'big-clamp': 'clamp(8rem, 1rem + 20vw, 20rem)',
+        'big-clamp': 'clamp(4rem, 1rem + 20vw, 20rem)',
         'small-clamp': 'clamp(4rem, 1rem + 10vw, 8rem)'
       },
     },

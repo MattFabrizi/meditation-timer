@@ -2,14 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-    button {
-        background-color: white;
-        padding: 0.4rem;
-        line-height: 1rem;
-        height: 2rem;
-        min-width: 8rem;
-        border-radius: 1rem;
-        font-weight: 700;
-    }
+@layer base {
+  button {
+    background-color: white;
+    padding: 0.4rem;
+    line-height: 1rem;
+    height: 2rem;
+    min-width: 8rem;
+    border-radius: 1rem;
+    font-weight: 700;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
 }

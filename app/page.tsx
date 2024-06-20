@@ -1,4 +1,4 @@
-import StopwatchApp from "./stopwatchApp";
+import StopwatchApp from "./components/stopwatchApp";
 
 export default function Home() {
   return (

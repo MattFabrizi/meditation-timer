@@ -34,6 +34,7 @@ export default function Timer({ isRunning }: { isRunning: boolean }) {
       <TimeInput
         isRunning={isRunning}
         time={minutes}
+        maxTime={99}
         setTime={setMinutes}
         twStyle={inputStyle + " text-right"}
       />
@@ -41,6 +42,7 @@ export default function Timer({ isRunning }: { isRunning: boolean }) {
       <TimeInput
         isRunning={isRunning}
         time={seconds}
+        maxTime={60}
         setTime={setSeconds}
         twStyle={inputStyle}
       />

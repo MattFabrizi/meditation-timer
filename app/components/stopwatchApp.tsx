@@ -12,7 +12,7 @@ export default function StopwatchApp() {
                 rounded-2xl border border-solid border-white 
                 bg-white bg-opacity-20 p-8 backdrop-blur-md"
     >
-      <Timer isRunning={isRunning} />
+      <Timer isRunning={isRunning} setIsRunning={setIsRunning} />
       <Controls isRunning={isRunning} setIsRunning={setIsRunning} />
     </div>
   );

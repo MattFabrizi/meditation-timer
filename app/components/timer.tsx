@@ -2,16 +2,36 @@
 import React, { useState, useEffect } from "react";
 import TimeInput from "./timeInput";
 
-export default function Timer({ isRunning }: { isRunning: boolean }) {
+export default function Timer({
+  isRunning,
+  setIsRunning,
+}: {
+  isRunning: boolean;
+  setIsRunning: any;
+}) {
   const [minutes, setMinutes] = useState(-1);
   const [seconds, setSeconds] = useState(-1);
 
+  const bell1 = "/bell1.mp3";
+
+  const [customBell, setCustomBell] = useState<HTMLAudioElement | null>(
+    typeof Audio !== "undefined" ? new Audio(bell1) : null,
+  );
+
   useEffect(() => {
     let intervalId: ReturnType<typeof setInterval>;
-    if (isRunning && (minutes > 0 || seconds > 0)) {
+    if (isRunning) {
+      if (minutes == -1) {
+        setMinutes(0);
+      }
+      if (seconds == -1) {
+        setSeconds(0);
+      }
       intervalId = setInterval(() => {
         if (seconds === 0) {
-          if (minutes === 0) {
+          if (minutes == 0) {
+            customBell?.play();
+            setIsRunning(false);
             clearInterval(intervalId);
             return;
           } else {
@@ -42,7 +62,7 @@ export default function Timer({ isRunning }: { isRunning: boolean }) {
       <TimeInput
         isRunning={isRunning}
         time={seconds}
-        maxTime={60}
+        maxTime={59}
         setTime={setSeconds}
         twStyle={inputStyle}
       />

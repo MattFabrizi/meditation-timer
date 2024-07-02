@@ -23,7 +23,7 @@ export default function Controls({
         className="stopwatch-button mb-[7%] bg-secondary tracking-widest text-white"
         onClick={startAndStop}
       >
-        {isRunning ? "STOP" : "START"}
+        {isRunning ? "PAUSE" : "START"}
       </button>
       {/* <button className="stopwatch-button" onClick={reset}>
           Reset

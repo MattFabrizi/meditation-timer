@@ -1,22 +1,29 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import TimeInput from "./timeInput";
+import useSound from "use-sound";
 
 export default function Timer({
   isRunning,
   setIsRunning,
+  intervallo,
+  isIntervalloChecked,
 }: {
   isRunning: boolean;
-  setIsRunning: any;
+  setIsRunning: React.Dispatch<React.SetStateAction<boolean>>;
+  intervallo: number;
+  isIntervalloChecked: boolean;
 }) {
   const [minutes, setMinutes] = useState(-1);
   const [seconds, setSeconds] = useState(-1);
 
   const bell1 = "/bell1.mp3";
 
-  const [customBell, setCustomBell] = useState<HTMLAudioElement | null>(
-    typeof Audio !== "undefined" ? new Audio(bell1) : null,
-  );
+  // const [customBell, setCustomBell] = useState<HTMLAudioElement | null>(
+  //   typeof Audio !== "undefined" ? new Audio(bell1) : null,
+  // );
+
+  const [play] = useSound(bell1);
 
   useEffect(() => {
     let intervalId: ReturnType<typeof setInterval>;
@@ -30,7 +37,8 @@ export default function Timer({
       intervalId = setInterval(() => {
         if (seconds === 0) {
           if (minutes == 0) {
-            customBell?.play();
+            //customBell?.play();
+            play();
             setIsRunning(false);
             clearInterval(intervalId);
             return;
@@ -45,6 +53,19 @@ export default function Timer({
     }
     return () => clearInterval(intervalId);
   }, [isRunning, minutes, seconds]);
+
+  // Intervals
+  useEffect(() => {
+    let intervalId: ReturnType<typeof setInterval>;
+    if (isRunning && isIntervalloChecked) {
+      intervalId = setInterval(() => {
+        //customBell?.play();
+        play();
+        console.log("playing");
+      }, intervallo);
+    }
+    return () => clearInterval(intervalId);
+  }, [isRunning]);
 
   const inputStyle =
     "w-full min-w-[2ch] appearance-none border-none bg-transparent focus:outline-none";

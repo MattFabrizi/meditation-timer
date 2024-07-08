@@ -11,7 +11,7 @@ const config: Config = {
       backgroundImage: {
         // "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         // "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "bg-image": "url('/bg_temp.jpg')",
+        "bg-image": "url('/meditationTimerBackground.jpg')",
       },
       colors: {
         'primary': '#454897',

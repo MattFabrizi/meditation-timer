@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import logo from "../public/tempLogo.png";
+import logo from "../public/meditationTimerOnline.png";
 import Image from "next/image";
-import {Space_Grotesk} from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Online Meditation Timer",
-  description: "A customizable and simple timer for your meditations",
+  title: "Free Online Meditation Timer: Enhance Your Mindfulness Practice",
+  description:
+    "Enhance your mindfulness practice with our free online meditation timer. Achieve serenity and focus using customizable intervals and the option to select your preferred Tibetan bell sounds.",
 };
 
 const fontFamily = Space_Grotesk({
-  subsets: ['latin'],
-  fallback: ['sans-serif'],
+  subsets: ["latin"],
+  fallback: ["sans-serif"],
 });
 
 export default function RootLayout({
@@ -21,13 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={fontFamily.className}>
-      <body className="bg-bg-image bg-cover bg-no-repeat min-h-dvh flex flex-col">
-        <header className="p-3 bg-white bg-opacity-40">
-          <div className="logo-container max-w-16 m-auto">
-            <Image
-              src={logo}
-              alt="logo"
-            /> 
+      <body className="flex min-h-dvh flex-col bg-bg-image bg-cover bg-no-repeat">
+        <header className="bg-white bg-opacity-40 p-3">
+          <div className="logo-container m-auto max-w-16">
+            <Image src={logo} alt="logo" />
           </div>
         </header>
         {children}

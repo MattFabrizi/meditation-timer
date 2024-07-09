@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className="flex min-h-dvh flex-col bg-bg-image bg-cover bg-no-repeat">
         <header className="bg-white bg-opacity-40 p-3">
           <div className="logo-container m-auto max-w-16">
-            <Image src={logo} alt="logo" />
+            <Image src={logo} alt="meditationTimerOnline" />
           </div>
         </header>
         {children}

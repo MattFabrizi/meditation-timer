@@ -28,13 +28,6 @@ export default function SettingsPanel({
         10000,
       ),
     );
-    console.log(
-      Math.max(
-        (intervalloMinutes >= 0 ? intervalloMinutes * 60000 : 0) +
-          (intervalloSeconds >= 0 ? intervalloSeconds * 1000 : 0),
-        10000,
-      ),
-    );
   }, [intervalloMinutes, intervalloSeconds]);
 
   useEffect(() => {
@@ -57,6 +50,7 @@ export default function SettingsPanel({
         />
         <h4 className="mr-2 inline text-white">SET INTERVAL :</h4>
         <TimeInput
+          id="input-intervalMinutes"
           isRunning={isRunning}
           time={intervalloMinutes}
           maxTime={99}
@@ -64,6 +58,7 @@ export default function SettingsPanel({
           twStyle={inputStyle}
         />
         <TimeInput
+          id="input-intervalSeconds"
           isRunning={isRunning}
           time={intervalloSeconds}
           maxTime={59}

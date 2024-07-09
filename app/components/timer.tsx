@@ -61,7 +61,6 @@ export default function Timer({
       intervalId = setInterval(() => {
         //customBell?.play();
         play();
-        console.log("playing");
       }, intervallo);
     }
     return () => clearInterval(intervalId);
@@ -73,6 +72,7 @@ export default function Timer({
   return (
     <div className="stopwatch-time flex flex-nowrap items-center justify-center text-big-clamp leading-none text-primary">
       <TimeInput
+        id="input-minutes"
         isRunning={isRunning}
         time={minutes}
         maxTime={99}
@@ -81,6 +81,7 @@ export default function Timer({
       />
       <span className="mx-4 text-small-clamp text-secondary">:</span>
       <TimeInput
+        id="input-seconds"
         isRunning={isRunning}
         time={seconds}
         maxTime={59}

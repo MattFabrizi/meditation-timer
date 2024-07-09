@@ -1,12 +1,14 @@
 import { SetStateAction } from "react";
 
 export default function TimeInput({
+  id,
   isRunning,
   time,
   maxTime,
   setTime,
   twStyle,
 }: {
+  id: string;
   isRunning: boolean;
   time: number;
   maxTime: number;
@@ -15,6 +17,7 @@ export default function TimeInput({
 }) {
   return (
     <input
+      id={id}
       type="number"
       value={time >= 0 ? String(time).padStart(2, "0") : ""}
       onChange={(e) =>

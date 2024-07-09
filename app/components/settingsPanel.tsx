@@ -43,6 +43,7 @@ export default function SettingsPanel({
     >
       <div className="pt-4">
         <input
+          id="intervals-on/off"
           type="checkbox"
           className="mr-2"
           onClick={(e) => setIsIntervalloChecked(!isIntervalloChecked)}

@@ -1,3 +1,4 @@
+import FeedbackButton from "./components/feedbackButton";
 import StopwatchApp from "./components/stopwatchApp";
 
 export default function Home() {
@@ -13,6 +14,8 @@ export default function Home() {
         >
           Buy Me a Coffee
         </a>
+        <br />
+        <FeedbackButton />
       </div>
     </>
   );

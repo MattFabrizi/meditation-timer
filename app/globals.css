@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  button {
+  button, .coffee-button {
     background-color: white;
     padding: 0.4rem;
     line-height: 1rem;

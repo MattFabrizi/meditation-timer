@@ -7,7 +7,12 @@ export default function Home() {
         <StopwatchApp />
       </main>
       <div className="footer mb-24 text-center">
-        <button className="my-4 bg-accent text-sm">Buy Me a Coffee</button>
+        <a
+          className="coffee-button my-4 bg-accent text-sm"
+          href="https://ko-fi.com/rndomlab"
+        >
+          Buy Me a Coffee
+        </a>
       </div>
     </>
   );

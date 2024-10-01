@@ -4,6 +4,8 @@ This project is an experiment designed to help me learn TypeScript, React, and T
 
 ![screenshot](./public/images/MeditationTimerDesign.jpg)
 
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
 ## Description
 
 Meditation Timer is a simple, distraction-free timer specifically designed for meditation sessions. Unlike traditional timers that use sliders, this app allows users to set both minutes and seconds directly through a text input. Additionally, users can set intervals, and a sound will play at the end of each interval to aid in structured meditation.
@@ -19,8 +21,6 @@ Meditation Timer is a simple, distraction-free timer specifically designed for m
 In upcoming versions, I plan to add:
 
 - **Sound Selection**: Choose different sounds for when the timer ends and for the interval notifications.
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 

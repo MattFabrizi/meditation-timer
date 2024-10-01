@@ -1,3 +1,25 @@
+# Meditation Timer
+
+This project is an experiment designed to help me learn TypeScript, React, and Tailwind. It was built using Next.js and is deployed on Vercel. You can use it at [Meditation Timer Online](https://www.meditationtimeronline.com/).
+
+![screenshot](./public/images/MeditationTimerDesign.jpg)
+
+## Description
+
+Meditation Timer is a simple, distraction-free timer specifically designed for meditation sessions. Unlike traditional timers that use sliders, this app allows users to set both minutes and seconds directly through a text input. Additionally, users can set intervals, and a sound will play at the end of each interval to aid in structured meditation.
+
+### Features:
+
+- **Custom Time Input**: Set the meditation duration by directly entering minutes and seconds.
+- **Interval Timer**: Set multiple intervals during your session, and a sound will notify you when each interval ends.
+- **Simple & Clean UI**: The timer is designed to be functional and self-explanatory, providing a distraction-free experience.
+
+## Future Features:
+
+In upcoming versions, I plan to add:
+
+- **Sound Selection**: Choose different sounds for when the timer ends and for the interval notifications.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -16,21 +38,6 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The project is deployed on Vercel, and you can access it at [Meditation Timer Online](https://www.meditationtimeronline.com/).
